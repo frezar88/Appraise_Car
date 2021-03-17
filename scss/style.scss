@@ -1,0 +1,431 @@
+@import "nullstyle";
+body {
+    overflow: auto;
+    height: 20px;
+}
+.appraise-car {
+    transition: 0.5s;
+    position: absolute;
+    top: 0;
+    left: -1000px;
+    max-width: 730px;
+    width: 100%;
+    border: solid 1px #e0e0e0;
+    transform: translateX(1000px);
+    height: 100%;
+    &__wrapper {
+    }
+}
+.appraise-car-header {
+    &__wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+    }
+
+    &__title {
+        margin-top: 50px;
+        font-family: MMC;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 29px;
+        color: #333333;
+    }
+
+    &__closecross {
+        position: absolute;
+        right: 0;
+        top: 45px;
+        cursor: pointer;
+        padding: 10px 17px;
+    }
+
+    &__comlete-line {
+        position: relative;
+        margin-top: 20px;
+        height: 10px;
+        width: 100%;
+        background: #e0e0e0;
+        &::before {
+            position: absolute;
+            content: "";
+            width: 0%;
+            height: 10px;
+            background-color: #ed0000;
+            left: 0;
+            top: 0;
+            transition: 0.5s;
+        }
+    }
+}
+.appraise-car-header__comlete-line.one:before {
+    position: absolute;
+    content: "";
+    width: 16.7%;
+    height: 10px;
+    background-color: #ed0000;
+    left: 0;
+    top: 0;
+    transition: 0.5s;
+}
+.appraise-car-header__comlete-line.two:before {
+    position: absolute;
+    content: "";
+    width: 33.3%;
+    height: 10px;
+    background-color: #ed0000;
+    left: 0;
+    top: 0;
+    transition: 0.5s;
+}
+.appraise-car-header__comlete-line.three:before {
+    position: absolute;
+    content: "";
+    width: 50%;
+    height: 10px;
+    background-color: #ed0000;
+    left: 0;
+    top: 0;
+    transition: 0.5s;
+}
+.appraise-car-header__comlete-line.four:before {
+    position: absolute;
+    content: "";
+    width: 66.7%;
+    height: 10px;
+    background-color: #ed0000;
+    left: 0;
+    top: 0;
+    transition: 0.5s;
+}
+.appraise-car-header__comlete-line.five:before {
+    position: absolute;
+    content: "";
+    width: 83.5%;
+    height: 10px;
+    background-color: #ed0000;
+    left: 0;
+    top: 0;
+    transition: 0.5s;
+}
+.appraise-car-header__comlete-line.six:before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 10px;
+    background-color: #ed0000;
+    left: 0;
+    top: 0;
+    transition: 0.5s;
+}
+
+.appraise-car-body {
+    &__wrapper {
+        padding: 24px;
+    }
+
+    &__list {
+    }
+
+    &__brand {
+    }
+
+    &__brand-input-text,
+    &__model-input-text,
+    &__mileage-input-text {
+        input {
+            width: calc(100% - 42px);
+            height: 48px;
+            padding: 0 20px;
+            background: #ffffff;
+            border: 0.5px solid #000000;
+
+            &:focus {
+                outline: none;
+            }
+        }
+    }
+
+    &__brand-input-radio,
+    &__model-input-radio,
+    &__year-input-radio,
+    &__generation-input-radio {
+        margin-top: 20px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 16px;
+
+        label {
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            font-family: MMC;
+            font-size: 16px;
+            line-height: 19px;
+            color: #000000;
+
+            input {
+                margin-right: 5px;
+
+                &:focus {
+                    outline: none;
+                }
+            }
+        }
+    }
+
+    &__brand-btn-more span,
+    &__model-btn-more span {
+        margin: 20px 0;
+        font-family: MMC;
+        font-size: 14px;
+        line-height: 17px;
+        text-decoration-line: underline;
+        color: #ed0000;
+        cursor: pointer;
+    }
+}
+
+.appraise-car-body {
+    &__generation {
+    }
+
+    &__list-content {
+    }
+
+    &__generation-input-radio,
+    &__modification-input-radio {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 10px;
+        label {
+            font-family: MMC;
+            font-size: 16px;
+            line-height: 19px;
+            color: #000000;
+            cursor: pointer;
+        }
+    }
+
+    &__generation-btn-more,
+    &__modification-btn-more,
+    &__equipment-btn-more,
+    &__year-btn-more {
+        opacity: 0;
+    }
+}
+
+.appraise-car-body {
+    &__equipment {
+    }
+
+    &__list-content {
+    }
+
+    &__equipment-input-radio {
+        display: grid;
+        grid-template-rows: repeat (3, 1fr);
+        grid-gap: 10px;
+        label {
+            font-family: MMC;
+            font-size: 16px;
+            line-height: 19px;
+            color: #000000;
+            cursor: pointer;
+            input {
+                margin-right: 5px;
+
+                &:focus {
+                    outline: none;
+                }
+            }
+        }
+    }
+
+    &__equipment-btn-more {
+    }
+}
+
+.appraise-car-body {
+    &__mileage {
+    }
+
+    &__list-content {
+    }
+
+    &__mileage-input-text {
+    }
+
+    &__mileage-btn {
+        margin-top: 20px;
+        button {
+            padding-right: 10px;
+            position: relative;
+            width: 131px;
+            height: 44px;
+            background-color: #828282;
+            font-weight: bold;
+            font-size: 16px;
+            line-height: 150%;
+
+            color: #ffffff;
+            text-transform: uppercase;
+            &::before {
+                content: url(../img/arrow-right.png);
+                position: absolute;
+                right: 10px;
+                top: 12px;
+            }
+            &:focus {
+                outline: none;
+            }
+        }
+    }
+}
+
+.acord {
+    position: relative;
+    font-family: MMC;
+    font-size: 16px;
+    line-height: 19px;
+    color: #000000;
+    padding: 20px 0;
+    &::before {
+        position: absolute;
+        content: url(../img/arrow_down.png);
+        right: 0;
+        transition: 0.4s;
+    }
+}
+.acord.active-appraise::before {
+    opacity: 0;
+}
+.appraise-car-body__list-content {
+    border-bottom: solid 2px #e0e0e0;
+}
+.list-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.app-list-item {
+    transition: 0.3s;
+    max-height: 0;
+    overflow: hidden;
+}
+.appraise-car-body__brand-input-radio,
+.appraise-car-body__model-input-radio {
+    max-height: 140px;
+    overflow: hidden;
+}
+/* .appraise-car-body{
+
+    &__list{
+        display: flex;
+        flex-direction: column;
+    }
+    &__brand {
+        order: -7;
+    }
+    &__model {
+        order: -6;
+    }
+    &__generation {
+        order: -5;
+    }
+    &__modification {
+        order: -4;
+    }
+    &__equipment {
+        order: -3;
+    }
+    &__year {
+        order: -2;
+    }
+    &__mileage {
+        order: -1;
+    }
+}
+ */
+
+.callback-form {
+    margin-top: 32px;
+    p:first-child {
+        font-family: MMC;
+        font-size: 16px;
+        line-height: 19px;
+        align-items: center;
+        color: #000000;
+    }
+    p:last-child {
+        font-family: Roboto;
+        font-size: 20px;
+        line-height: 23px;
+
+        color: #000000;
+        span {
+            font-family: Roboto;
+            font-weight: bold;
+            font-size: 20px;
+            line-height: 23px;
+            align-items: center;
+            text-transform: uppercase;
+            color: #000000;
+            margin-right: 20px;
+        }
+    }
+    &__body {
+        margin: 20px 0;
+
+        background: #ed0000;
+        max-width: 525px;
+    }
+    form {
+        margin: 28px 35px;
+        h4 {
+            padding-top: 25px;
+            font-family: Roboto;
+            font-weight: bold;
+            font-size: 18px;
+            line-height: 21px;
+            text-transform: uppercase;
+            color: #ffffff;
+        }
+        input {
+            margin-top: 14px;
+            max-width: 335px;
+            width: 100%;
+            font-family: Roboto;
+            font-size: 14px;
+            line-height: 16px;
+            padding: 12px 10px;
+            &:focus {
+                outline: none;
+            }
+        }
+        button {
+            margin-top: 10px;
+            padding: 12px 10px;
+            max-width: 355px;
+            width: 100%;
+            background: #000000;
+            font-family: Roboto;
+            font-weight: bold;
+            font-size: 18px;
+            line-height: 21px;
+            text-transform: uppercase;
+            text-align: center;
+            color: #ffffff;
+            margin-bottom: 28px;
+            &:focus{
+                outline: none;
+            }
+        }
+    }
+}
+.appraise-car-body__brand-btn-more,
+.appraise-car-body__model-btn-more{
+margin: 20px 0;
+}
+
